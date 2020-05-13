@@ -15,15 +15,15 @@ from __future__ import absolute_import
 import unittest
 
 import storagequery
-from storagequery.api.sql_api import SQLApi  # noqa: E501
+from storagequery.api.storage_query_sql_api import StorageQuerySQLApi  # noqa: E501
 from storagequery.rest import ApiException
 
 
-class TestSQLApi(unittest.TestCase):
-    """SQLApi unit test stubs"""
+class TestStorageQuerySQLApi(unittest.TestCase):
+    """StorageQuerySQLApi unit test stubs"""
 
     def setUp(self):
-        self.api = storagequery.api.sql_api.SQLApi()  # noqa: E501
+        self.api = storagequery.api.storage_query_sql_api.StorageQuerySQLApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -14,5 +14,5 @@
 from __future__ import absolute_import
 
 # import models into model package
-from storagequery.models.body_data_access_sql import BodyDataAccessSql
-from storagequery.models.response_data_access_sql import ResponseDataAccessSql
+from storagequery.models.request_body_data_access_sql import RequestBodyDataAccessSql
+from storagequery.models.success_response_data_access_sql import SuccessResponseDataAccessSql

@@ -1,14 +1,14 @@
-# storagequery.SQLApi
+# storagequery.StorageQuerySQLApi
 
 All URIs are relative to *https://api.storagequery.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**run_sql_query**](SQLApi.md#run_sql_query) | **POST** /data_access/sql | 
+[**run_sql_query**](StorageQuerySQLApi.md#run_sql_query) | **POST** /data_access/sql | 
 
 
 # **run_sql_query**
-> ResponseDataAccessSql run_sql_query(authorization, content_type, body_data_access_sql=body_data_access_sql)
+> SuccessResponseDataAccessSql run_sql_query(authorization, content_type, request_body_data_access_sql=request_body_data_access_sql)
 
 
 
@@ -35,16 +35,16 @@ configuration.host = "https://api.storagequery.com/v1"
 # Enter a context with an instance of the API client
 with storagequery.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = storagequery.SQLApi(api_client)
+    api_instance = storagequery.StorageQuerySQLApi(api_client)
     authorization = 'authorization_example' # str | Defines the user authorization API key
 content_type = 'content_type_example' # str | Defines the request content media type
-body_data_access_sql = storagequery.BodyDataAccessSql() # BodyDataAccessSql |  (optional)
+request_body_data_access_sql = storagequery.RequestBodyDataAccessSql() # RequestBodyDataAccessSql |  (optional)
 
     try:
-        api_response = api_instance.run_sql_query(authorization, content_type, body_data_access_sql=body_data_access_sql)
+        api_response = api_instance.run_sql_query(authorization, content_type, request_body_data_access_sql=request_body_data_access_sql)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling SQLApi->run_sql_query: %s\n" % e)
+        print("Exception when calling StorageQuerySQLApi->run_sql_query: %s\n" % e)
 ```
 
 ### Parameters
@@ -53,11 +53,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Defines the user authorization API key | 
  **content_type** | **str**| Defines the request content media type | 
- **body_data_access_sql** | [**BodyDataAccessSql**](BodyDataAccessSql.md)|  | [optional] 
+ **request_body_data_access_sql** | [**RequestBodyDataAccessSql**](RequestBodyDataAccessSql.md)|  | [optional] 
 
 ### Return type
 
-[**ResponseDataAccessSql**](ResponseDataAccessSql.md)
+[**SuccessResponseDataAccessSql**](SuccessResponseDataAccessSql.md)
 
 ### Authorization
 

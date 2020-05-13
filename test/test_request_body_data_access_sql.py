@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import storagequery
-from storagequery.models.response_data_access_sql import ResponseDataAccessSql  # noqa: E501
+from storagequery.models.request_body_data_access_sql import RequestBodyDataAccessSql  # noqa: E501
 from storagequery.rest import ApiException
 
-class TestResponseDataAccessSql(unittest.TestCase):
-    """ResponseDataAccessSql unit test stubs"""
+class TestRequestBodyDataAccessSql(unittest.TestCase):
+    """RequestBodyDataAccessSql unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,24 +29,23 @@ class TestResponseDataAccessSql(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ResponseDataAccessSql
+        """Test RequestBodyDataAccessSql
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = storagequery.models.response_data_access_sql.ResponseDataAccessSql()  # noqa: E501
+        # model = storagequery.models.request_body_data_access_sql.RequestBodyDataAccessSql()  # noqa: E501
         if include_optional :
-            return ResponseDataAccessSql(
-                response_time = 0.245, 
-                content = [
-                    None
-                    ]
+            return RequestBodyDataAccessSql(
+                query = 'SELECT * FROM company.users', 
+                bypass_cache = False
             )
         else :
-            return ResponseDataAccessSql(
+            return RequestBodyDataAccessSql(
+                query = 'SELECT * FROM company.users',
         )
 
-    def testResponseDataAccessSql(self):
-        """Test ResponseDataAccessSql"""
+    def testRequestBodyDataAccessSql(self):
+        """Test RequestBodyDataAccessSql"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

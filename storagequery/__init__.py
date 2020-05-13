@@ -17,7 +17,7 @@ from __future__ import absolute_import
 __version__ = "1.0.0"
 
 # import apis into sdk package
-from storagequery.api.sql_api import SQLApi
+from storagequery.api.storage_query_sql_api import StorageQuerySQLApi
 
 # import ApiClient
 from storagequery.api_client import ApiClient
@@ -28,6 +28,6 @@ from storagequery.exceptions import ApiValueError
 from storagequery.exceptions import ApiKeyError
 from storagequery.exceptions import ApiException
 # import models into sdk package
-from storagequery.models.body_data_access_sql import BodyDataAccessSql
-from storagequery.models.response_data_access_sql import ResponseDataAccessSql
+from storagequery.models.request_body_data_access_sql import RequestBodyDataAccessSql
+from storagequery.models.success_response_data_access_sql import SuccessResponseDataAccessSql
 

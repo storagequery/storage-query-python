@@ -1,4 +1,4 @@
-# ResponseDataAccessSql
+# SuccessResponseDataAccessSql
 
 ## Properties
 Name | Type | Description | Notes

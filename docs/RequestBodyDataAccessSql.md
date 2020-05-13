@@ -1,4 +1,4 @@
-# BodyDataAccessSql
+# RequestBodyDataAccessSql
 
 ## Properties
 Name | Type | Description | Notes

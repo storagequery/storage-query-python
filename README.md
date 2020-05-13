@@ -1,4 +1,4 @@
-# storagequery
+# Storage Query Python Client
 This document describes all operations that can be executed on the StorageQuery API.
 
 ## Requirements.
@@ -54,19 +54,21 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.storagequery.com/v1
 configuration.host = "https://api.storagequery.com/v1"
 
+# Defining host is optional and default to https://api.storagequery.com/v1
+configuration.host = "https://api.storagequery.com/v1"
 # Enter a context with an instance of the API client
 with storagequery.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = storagequery.SQLApi(api_client)
+    api_instance = storagequery.StorageQuerySQLApi(api_client)
     authorization = 'authorization_example' # str | Defines the user authorization API key
 content_type = 'content_type_example' # str | Defines the request content media type
-body_data_access_sql = storagequery.BodyDataAccessSql() # BodyDataAccessSql |  (optional)
+request_body_data_access_sql = storagequery.RequestBodyDataAccessSql() # RequestBodyDataAccessSql |  (optional)
 
     try:
-        api_response = api_instance.run_sql_query(authorization, content_type, body_data_access_sql=body_data_access_sql)
+        api_response = api_instance.run_sql_query(authorization, content_type, request_body_data_access_sql=request_body_data_access_sql)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling SQLApi->run_sql_query: %s\n" % e)
+        print("Exception when calling StorageQuerySQLApi->run_sql_query: %s\n" % e)
     
 ```
 
@@ -76,13 +78,13 @@ All URIs are relative to *https://api.storagequery.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SQLApi* | [**run_sql_query**](docs/SQLApi.md#run_sql_query) | **POST** /data_access/sql | 
+*StorageQuerySQLApi* | [**run_sql_query**](docs/StorageQuerySQLApi.md#run_sql_query) | **POST** /data_access/sql | 
 
 
 ## Documentation For Models
 
- - [BodyDataAccessSql](docs/BodyDataAccessSql.md)
- - [ResponseDataAccessSql](docs/ResponseDataAccessSql.md)
+ - [RequestBodyDataAccessSql](docs/RequestBodyDataAccessSql.md)
+ - [SuccessResponseDataAccessSql](docs/SuccessResponseDataAccessSql.md)
 
 
 ## Documentation For Authorization
@@ -93,10 +95,4 @@ Class | Method | HTTP request | Description
 - **Type**: API key
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
-
-
-## Author
-
-
-
 
